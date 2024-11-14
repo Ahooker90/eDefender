@@ -10,7 +10,7 @@ For each file type, 12,000 source files were collected from various dataset sour
 - PDF: Papers from arXiv (https://arxiv.org/) and Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
 - TXT: Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
 
-**JPG, MP3, and part of PDF files were collected from De Gaspari(2022)'s collected dataset (https://drive.google.com/file/d/1IDNv3U1hRILXblwT9fI3G-D8hJquiequ)**
+**JPG, MP3, and part of PDF files were downloaded directly from De Gaspari(2022)'s collected dataset (https://drive.google.com/file/d/1IDNv3U1hRILXblwT9fI3G-D8hJquiequ)**
   
 ### Dataset Collection
 This dataset includes data from the following sources:
