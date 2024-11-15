@@ -17,7 +17,7 @@ For each file type, 12,000 source files were collected from various dataset sour
 ### File Transformations
 After the collection of the source files for each file type, follow these instructions to perform file transformations:
 - **Original files**: source files
-- **Compressed files**: [WinRAR] (https://www.win-rar.com/create-rar-archive.html?&L=0) was utilized to perform file compressions. RAR was selected as the format of the new archive, and compression level, dictionary size, and other archiving parameters were set as default.
+- **Compressed files**: [WinRAR](https://www.win-rar.com/create-rar-archive.html?&L=0) was utilized to perform file compressions. RAR was selected as the format of the new archive, and compression level, dictionary size, and other archiving parameters were set as default.
 - **Encrypted files**: encrypting file types utilized the AES implementation provided by the [PyCryptodome Python library](https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html).
 
 ```
