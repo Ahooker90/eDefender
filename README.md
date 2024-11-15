@@ -1,5 +1,5 @@
 # eDefender
-The paper has been accepted to TrustCom 2024
+✨The paper has been accepted to TrustCom 2024✨
 
 ## Dataset Description
 This dataset starts with **12,000** source files across five file types: **AVI, JPEG, MP3, PDF, and TXT**. For each file type, five transformations are applied: **original**, **compressed(_rar_)**, **encrypted(_enc_)**, **encrypted-then-compressed(_enc_rar_)**, and **compressed-then-encrypted(_rar_enc_)**. This process yields a total of **300,000** Byte Frequency Distribution (BFD) samples in the final dataset.<br />
@@ -111,8 +111,8 @@ Follow the below steps to replicate our results from Table I in the paper:
 **1. Dataset Preparation:**
 - Start with a dataset of 300,000 transformed files, each with 256-byte features.
 
-**2. Factor Analysis in SPSS:**
-- Perform factor analysis using Varimax rotation in SPSS Statistics.
+**2. Exploratory Factor Analysis(EFA) in SPSS:**
+- Perform factor analysis with Principal Component Analysis (PCA) and Varimax rotation in SPSS Statistics.
 - Remove features with low factor loadings; retain only features with loadings ≥ 0.4 in the rotated component matrix.
 
 **3. Select Features by Factor:**
