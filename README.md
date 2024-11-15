@@ -6,19 +6,19 @@ This dataset starts with **12,000** source files across five file types: **AVI, 
 <br />
 ### Source File Collection
 For each file type, 12,000 source files were collected from various dataset sources:<br />
-- AVI: UCF101 dataset (https://www.crcv.ucf.edu/data/UCF101.php)
-- JPG: Open Images Dataset v5 (https://www.figure-eight.com/dataset/)
-- MP3: FMA medium dataset (https://github.com/mdeff/fma)
-- PDF: Papers from arXiv (https://arxiv.org/) and Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
-- TXT: Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
+- **AVI**: UCF101 dataset (https://www.crcv.ucf.edu/data/UCF101.php)
+- **JPG**: Open Images Dataset v5 (https://www.figure-eight.com/dataset/)
+- **MP3**: FMA medium dataset (https://github.com/mdeff/fma)
+- **PDF**: Papers from arXiv (https://arxiv.org/) and Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
+- **TXT**: Govdocs1 (https://digitalcorpora.org/corpora/file-corpora/files/)
 
 **JPG, MP3, and some of PDF files were downloaded directly from [De Gaspari(2022)](https://link.springer.com/article/10.1007/s00521-022-07586-7)'s collected dataset (https://drive.google.com/file/d/1IDNv3U1hRILXblwT9fI3G-D8hJquiequ)**
 
 ### File Transformations
 After the collection of the source files for each file type, follow these instructions to perform file transformations:
-- Original files: source files
-- Compressed files: [WinRAR](https://www.win-rar.com/create-rar-archive.html?&L=0) was utilized to perform file compressions. RAR was selected as the format of the new archieve, compression level, dictionary size and other archiving pararmeters were set as default.
-- Encrypted files: encrypting file types utilized the AES implementation provided by the [PyCryptodome Python library](https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html).
+- **Original files**: source files
+- **Compressed files**: [WinRAR] (https://www.win-rar.com/create-rar-archive.html?&L=0) was utilized to perform file compressions. RAR was selected as the format of the new archive, and compression level, dictionary size, and other archiving parameters were set as default.
+- **Encrypted files**: encrypting file types utilized the AES implementation provided by the [PyCryptodome Python library](https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html).
 
 ```
 import os
@@ -64,8 +64,8 @@ for file in folder_path:
     with open(orig_file, 'rb') as in_file, open(enc_file, 'wb') as out_file:
         encrypt(in_file, out_file, password)
 ```
-- Encrypted-then-Compressed: first encrypt the source file with procedures provided above then perform file compression with WinRAR
-- Compressed-then-Encrypted: first perform file compression with WinRAR then encrypt the files with procedures provided above
+- **Encrypted-then-Compressed**: first encrypt the source file with procedures provided above then perform file compression with WinRAR
+- **Compressed-then-Encrypted**: first perform file compression with WinRAR then encrypt the files with procedures provided above
 
 ### Byte Frequency Distributions(BFD) Generations
 Our collected samples have a wide range of byte sizes:
@@ -101,7 +101,30 @@ for j = 1 : nfiles
   end
 end
 ```
-You may download the BFD dataset that we used in the paper within this [link](https://utsacloud-my.sharepoint.com/:u:/g/personal/wenjian_huang_my_utsa_edu/EfmTAPLyGfFPuGpy4Re8sf0BhbjbRbX3sPvDNkM4QC3O4Q).
+You may download the BFD dataset that we used in the paper within this [link](https://utsacloud-my.sharepoint.com/:u:/g/personal/wenjian_huang_my_utsa_edu/EfmTAPLyGfFPuGpy4Re8sf0BhbjbRbX3sPvDNkM4QC3O4Q?e=D5SfKA).
+
+## Addressing Research Questions (RQs)
+
+### _RQ1: Are there discernible patterns in the BFDs that can characterize the file types?_
+Follow the below steps to replicate our results from Table I in the paper:
+1. Dataset Preparation:
+- Start with a dataset of 300,000 transformed files, each with 256-byte features.
+3. Factor Analysis in SPSS:
+- Perform factor analysis using Varimax rotation in SPSS Statistics.
+- Remove features with low factor loadings; retain only features with loadings ≥ 0.4 in the rotated component matrix.
+3. Select Features by Factor:
+- Identify the features corresponding to each factor (component) based on the rotated component matrix.
+4. Reliability Statistics:
+- Calculate Cronbach's Alpha to assess internal consistency using the selected features from each factor.
+- Review Cronbach's Alpha results to confirm underlying consistency in byte distribution patterns across file types.
+
+Useful Tutorials:
+[SPSS Factor Analysis – Intermediate Tutorial](https://www.spss-tutorials.com/spss-factor-analysis-intermediate-tutorial/) , 
+[Cronbach's Alpha (α) using SPSS Statistics](https://statistics.laerd.com/spss-tutorials/cronbachs-alpha-using-spss-statistics.php#interpreting)
+
+### _RQ2: Can ML algorithms capture those patterns and detect the file types?_
+
+### _RQ3: How can ML algorithms detect the file types in encrypted or compressed files for law enforcement applications?_
 
 ## If you use our dataset or model in your paper, please cite:
 ```
