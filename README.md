@@ -107,14 +107,18 @@ You may download the BFD dataset that we used in the paper within this [link](ht
 
 ### _RQ1: Are there discernible patterns in the BFDs that can characterize the file types?_
 Follow the below steps to replicate our results from Table I in the paper:
-1. Dataset Preparation:
+
+**1. Dataset Preparation:**
 - Start with a dataset of 300,000 transformed files, each with 256-byte features.
-3. Factor Analysis in SPSS:
+
+**2. Factor Analysis in SPSS:**
 - Perform factor analysis using Varimax rotation in SPSS Statistics.
 - Remove features with low factor loadings; retain only features with loadings ≥ 0.4 in the rotated component matrix.
-3. Select Features by Factor:
+
+**3. Select Features by Factor:**
 - Identify the features corresponding to each factor (component) based on the rotated component matrix.
-4. Reliability Statistics:
+
+**4. Reliability Statistics:**
 - Calculate Cronbach's Alpha to assess internal consistency using the selected features from each factor.
 - Review Cronbach's Alpha results to confirm underlying consistency in byte distribution patterns across file types.
 
