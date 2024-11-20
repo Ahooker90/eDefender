@@ -129,10 +129,10 @@ Useful Tutorials:
 ## If you use our dataset or model in your paper, please cite:
 ```
 @inproceedings{Hooker2024,
-author = {Hooker, A. and Huang, W. and Kurumathur, SK. and Vishwamitra, N. and Choo, KKR},
-title = {Towards Understanding and Detecting File Types in Encrypted Files for Law Enforcement Applications},
- booktitle    = {23rd {IEEE} International Conference on Trust, Security and Privacy in Computing and Communications, TrustCom 2024},
- publisher    = {{IEEE}},
- year         = {2024}
+author       = {Hooker, A. and Huang, W. and Kurumathur, SK. and Vishwamitra, N. and Choo, KKR},
+title        = {Towards Understanding and Detecting File Types in Encrypted Files for Law Enforcement Applications},
+booktitle    = {23rd {IEEE} International Conference on Trust, Security and Privacy in Computing and Communications, TrustCom 2024},
+publisher    = {{IEEE}},
+year         = {2024}
 }
 ```
