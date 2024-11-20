@@ -126,16 +126,12 @@ Useful Tutorials:
 [SPSS Factor Analysis – Intermediate Tutorial](https://www.spss-tutorials.com/spss-factor-analysis-intermediate-tutorial/) , 
 [Cronbach's Alpha (α) using SPSS Statistics](https://statistics.laerd.com/spss-tutorials/cronbachs-alpha-using-spss-statistics.php#interpreting)
 
-### _RQ2: Can ML algorithms capture those patterns and detect the file types?_
-
-### _RQ3: How can ML algorithms detect the file types in encrypted or compressed files for law enforcement applications?_
-
 ## If you use our dataset or model in your paper, please cite:
 ```
 @article{Smith2023,
   author = {Hooker, A. and Huang, W. and Kurumathur, SK. and Vishwamitra, N. and Choo, KKR},
   title = {Towards Understanding and Detecting File Types in Encrypted Files for Law Enforcement Applications},
   journal = {TrustCom},
-  year = {2024},
+  year = {2024}
 }
 ```
