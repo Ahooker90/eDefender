@@ -132,5 +132,10 @@ Useful Tutorials:
 
 ## If you use our dataset or model in your paper, please cite:
 ```
-
+@article{Smith2023,
+  author = {Hooker, A. and Huang, W. and Kurumathur, SK. and Vishwamitra, N. and Choo, KKR},
+  title = {Towards Understanding and Detecting File Types in Encrypted Files for Law Enforcement Applications},
+  journal = {TrustCom},
+  year = {2024},
+}
 ```
